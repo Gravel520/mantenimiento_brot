@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>354</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image:url(:/Fondo/Fondo.png);</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>481</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>4</number>
+   </property>
+   <widget class="QWidget" name="tab_copia_seguridad">
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <attribute name="title">
+     <string>Copia de Seguridad</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>411</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Con esta opción creamos una copia de seguridad de la base de datos en este&lt;br&gt; preciso momento. Posteriormente podremos recuperarlausando la opción&lt;br&gt; &amp;quot;Cargar Copia&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="pb_copia_seguridad">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>451</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_aceptar_co_seg">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>190</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Aceptar</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_copia_selectiva">
+    <attribute name="title">
+     <string>Copia Selectiva</string>
+    </attribute>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-1</y>
+       <width>461</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Con esta opción creamos una copia de seguridad de la base de datos, pero&lt;br&gt; de forma selectiva. Podremos fijar la fecha inicial y final, para definir el&lt;br&gt; intervalo de registros que queremos copiar. Otra forma sería indicando el&lt;br&gt; mes y el año a realizar la copia. Tenemos la opción de borrar esos datos de la&lt;br&gt; base de datos si de momento no los necesitamos. Posteriormente  podremos&lt;br&gt;                     recuperarla usando la opción &amp;quot;Cargar Copia&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="pb_copia_selectiva">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>451</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_aceptar_co_selec">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>230</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Aceptar</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>157</x>
+       <y>100</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Fecha Inicial</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>347</x>
+       <y>100</y>
+       <width>60</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Fecha Final</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>166</y>
+       <width>30</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mes:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>337</x>
+       <y>166</y>
+       <width>30</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Año:</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_borrar_seleccion">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>230</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Borrar Selección</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="de_fecha_incial">
+     <property name="geometry">
+      <rect>
+       <x>137</x>
+       <y>120</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="de_fecha_final">
+     <property name="geometry">
+      <rect>
+       <x>327</x>
+       <y>120</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_mes">
+     <property name="geometry">
+      <rect>
+       <x>137</x>
+       <y>160</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_ano">
+     <property name="geometry">
+      <rect>
+       <x>367</x>
+       <y>160</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rd_fechas">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>120</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rd_mes">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>160</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_liberacion">
+    <attribute name="title">
+     <string>Liberación</string>
+    </attribute>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>451</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Esta opción nos servirá para borrar parte del contenido de nuestra&lt;br/&gt;base de datos que ya no nos sea util. Para ello bastará con elegir&lt;br/&gt;la fecha hasta donde queramos borrar los datos. Estos datos&lt;br/&gt;no serán recuperables.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="pb_liberacion">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>451</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_aceptar_liberacion">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>220</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Aceptar</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="de_fecha_lib">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>140</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>145</y>
+       <width>40</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Fecha:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_cargar_copia">
+    <attribute name="title">
+     <string>Cargar Copia</string>
+    </attribute>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>451</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Con esta opción creamos recuperamos, parte o toda la base de datos, que&lt;br/&gt;hayamos copiado anteriormente. Bastará con elegir el archivo que se genera&lt;br/&gt;al hacer la copia, y esta se restaurará.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Al cargar el archivo, el contenido de la base de datos se perderá, con&lt;br/&gt;lo cual, para mantenerlo, sería necesario hacer una 'Copia de Seguridad'.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>130</y>
+       <width>100</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nombre del archivo:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_seleccionar_archivo">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>150</y>
+       <width>160</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seleccionar archivo</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_cargar_archivo">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>230</y>
+       <width>90</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cargar archivo</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>130</y>
+       <width>100</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tipo de archivo:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_tipo_archivo">
+     <property name="geometry">
+      <rect>
+       <x>66</x>
+       <y>150</y>
+       <width>91</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_config">
+    <attribute name="title">
+     <string>Configuración</string>
+    </attribute>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>451</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Con esta opción podemos elegir el lugar del disco donde queremos mantener&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;nuestras copias de seguridad, para después poder usarlas.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;También debemos definir el lugar donde se encuentra el scrip que usará la aplicación&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;para poder hacer y restaurar las copias de seguridad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ubicación para las copias de seguridad:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Scrip mysqldump y mysql:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_copia">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>441</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_mysql">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>441</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ubica_copia">
+     <property name="geometry">
+      <rect>
+       <x>339</x>
+       <y>140</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seleccionar ubicación</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ubica_mysql">
+     <property name="geometry">
+      <rect>
+       <x>339</x>
+       <y>200</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seleccionar ubicación</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btn_salir">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>320</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

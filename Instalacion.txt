@@ -1,0 +1,3 @@
+Hay que crear en esta ubicación un archivo de texto que se llame
+'variables.txt'. Deberá contener al principio, como mínimo, la ubicación
+raiz del disco duro, es decir 'c:'.
